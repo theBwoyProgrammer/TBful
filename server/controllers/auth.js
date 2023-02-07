@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import User from '../models/user.js';
 
 // REGISTER
-export const register = async (req, res) => {
+const register = async (req, res) => {
     try{
         const {
             firstName,
@@ -53,3 +53,5 @@ export const login = async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 }
+
+export default register;
